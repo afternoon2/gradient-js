@@ -1,0 +1,62 @@
+{
+  "name": "root",
+  "private": true,
+  "description": "Gradient creation library running in the browser",
+  "author": "Jakub Antolak <poprostuantolak@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "svg",
+    "gradients",
+    "colors",
+    "chroma-js"
+  ],
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.9",
+    "@typescript-eslint/eslint-plugin": "^2.3.2",
+    "@typescript-eslint/parser": "^2.3.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "commitizen": "^4.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "ghooks": "^2.0.4",
+    "jest": "^24.9.0",
+    "lerna": "^3.16.4",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "webpack --config config/webpack.prod.js",
+    "dev": "webpack --config config/webpack.dev.js",
+    "commit": "git-cz",
+    "lint": "eslint packages/**/lib/*.ts"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "yarn lint"
+    },
+    "jest": {
+      "coverageThreshold": {
+        "global": {
+          "branches": 50,
+          "functions": 50,
+          "lines": 50,
+          "statements": 50
+        }
+      },
+      "coverageDirectory": "./coverage",
+      "collectCoverage": true
+    }
+  }
+}
