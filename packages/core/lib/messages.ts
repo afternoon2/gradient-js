@@ -1,3 +1,3 @@
 export const messages = {
-  mixedColorTypes: '',
+  invalidColorTypes: 'Invalid color types. Only colors passed as the css strings are accepted',
 };

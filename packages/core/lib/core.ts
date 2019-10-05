@@ -23,7 +23,7 @@ export class Core {
 
   get(colors: string[], options: CoreOptions = this.defaultOptions): Color[] {
     if (colors.find((val: unknown) => typeof val !== 'string')) {
-      throw new Error(messages.mixedColorTypes);
+      throw new Error(messages.invalidColorTypes);
     }
     const { getLinearScale, getBezierScale, getBase } = this;
     const scale = options.useBezier ? getBezierScale : getLinearScale;
@@ -34,14 +34,15 @@ export class Core {
     let result: ScaleResult;
     const scaled = chroma.scale(colors);
     if (!options.interpolation) {
-      const scaledWithInterp = scaled;
       result = {
-        scale: options.lightnessCorrection ? scaledWithInterp.correctLightness() : scaledWithInterp,
+        scale: options.lightnessCorrection ? scaled.correctLightness() : scaled,
         options,
       };
     } else {
       result = {
-        scale: options.lightnessCorrection ? scaled.mode(options.interpolation).correctLightness() : scaled,
+        scale: options.lightnessCorrection
+          ? scaled.mode(options.interpolation).correctLightness()
+          : scaled.mode(options.interpolation),
         options,
       };
     }

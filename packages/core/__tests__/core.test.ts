@@ -16,7 +16,7 @@ describe('@gradient-js/core', () => {
         const core = new Core();
         core.get(fakeColors, config);
       };
-      expect(exec).toThrowError(messages.mixedColorTypes);
+      expect(exec).toThrowError(messages.invalidColorTypes);
     });
 
     test("If it generates chroma colors array with correct length", () => {
