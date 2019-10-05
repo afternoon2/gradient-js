@@ -1,5 +1,5 @@
 export class Css {
-    get value(): string {
-        return 'css';
-    }
+  get value(): string {
+    return 'css';
+  }
 }

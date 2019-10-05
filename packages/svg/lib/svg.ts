@@ -1,5 +1,5 @@
 export class Svg {
-    get value(): string {
-        return 'svg';
-    }
+  get value(): string {
+    return 'svg';
+  }
 }

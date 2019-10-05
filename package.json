@@ -38,7 +38,11 @@
     "build": "webpack --config config/webpack.prod.js",
     "dev": "webpack --config config/webpack.dev.js",
     "commit": "git-cz",
-    "lint": "eslint packages/**/lib/*.ts"
+    "lint": "eslint packages/**/lib/*.ts",
+    "test": "jest",
+    "prettier:base": "prettier --parser typescript",
+    "prettier:check": "npm run prettier:base -- --list-different \"packages/**/*.{ts,tsx}\"",
+    "prettier:write": "npm run prettier:base -- --write \"packages/**/*.{ts,tsx}\""
   },
   "config": {
     "commitizen": {
@@ -46,18 +50,6 @@
     },
     "ghooks": {
       "pre-commit": "yarn lint"
-    },
-    "jest": {
-      "coverageThreshold": {
-        "global": {
-          "branches": 50,
-          "functions": 50,
-          "lines": 50,
-          "statements": 50
-        }
-      },
-      "coverageDirectory": "./coverage",
-      "collectCoverage": true
     }
   }
 }

@@ -24,5 +24,15 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "chroma-js": "^2.0.6"
+  },
+  "devDependencies": {
+    "@types/chroma-js": "^1.4.3",
+    "babel-jest": "^24.9.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "ts-jest": "^24.1.0",
+    "utility-types": "^3.8.0"
   }
 }
