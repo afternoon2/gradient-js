@@ -1,5 +1,5 @@
 import { Core, CoreOptions } from '@gradient-js/core';
-import { RequiredKeys } from 'utility-types';
+import { RequiredKeys, ValuesType } from 'utility-types';
 import { Color } from 'chroma-js';
 
 export type SvgLinearGradientOptions = {
@@ -17,6 +17,15 @@ export type SvgRadialGradientOptions = {
   fx: number;
   fy: number;
   spreadMethod: 'pad' | 'repeat' | 'reflect';
+};
+
+export type RawSvgOptions = {
+  attributes: {
+    id: string;
+    type: 'linear' | 'radial';
+    gradientUnits?: 'objectBoundingBox' | 'userSpaceOnUse';
+  } & (Partial<SvgRadialGradientOptions> | Partial<SvgLinearGradientOptions>);
+  stops: SVGStopElement[];
 };
 
 export type SvgOptions = CoreOptions & {
@@ -51,18 +60,18 @@ export class Svg {
     return this.createGradient();
   }
 
-  private createSvgElement(type: RequiredKeys<SVGElementTagNameMap>): SVGElement {
+  private createSvgElement(type: RequiredKeys<SVGElementTagNameMap>): ValuesType<SVGElement> {
     return document.createElementNS('http://www.w3.org/2000/svg', type);
   }
 
-  private createColorStop(color: string, index: number, length: number): SVGElement {
+  private createColorStop(color: string, index: number, length: number): SVGStopElement {
     const stop = this.createSvgElement('stop');
-    stop.setAttribute('offset', `${100 * (index / length)}%`);
+    stop.offset = `${100 * (index / length)}%`;
     stop.setAttribute('stop-color', color);
     return stop;
   }
 
-  private colorsToStops(): SVGElement[] {
+  private colorsToStops(): SVGStopElement[] {
     const colors = this.colors as Color[];
     return colors.map((color: Color, index: number) => {
       const cssColor = `rgba(${color.rgba(true)})`;
@@ -70,7 +79,7 @@ export class Svg {
     });
   }
 
-  private createGradientElement(): SVGElement {
+  private createGradientElement(): SVGGradientElement {
     const options = this.options as SvgOptions;
     const gradient = this.createSvgElement(`${options.type}Gradient` as RequiredKeys<SVGElementTagNameMap>);
     const attrs = /((id)|([c|f|x|y|r][x|y|1|2]?)|(gradientUnits))/;
@@ -96,7 +105,7 @@ export class Svg {
     return gradient;
   }
 
-  private createGradient(): SVGElement {
+  private createGradient(): SVGGradientElement {
     const gradient = this.createGradientElement();
     const stops = this.colorsToStops();
     stops.forEach((stop: SVGElement) => gradient.appendChild(stop));
