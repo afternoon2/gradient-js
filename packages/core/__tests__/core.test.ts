@@ -42,8 +42,7 @@ describe('@gradient-js/core', () => {
       };
       const core = new Core();
       const result: Color[] = core.get(colors, config);
-      // @ts-ignore
-      expect(result.find((color: Color) => !Array.isArray(color['_rgb']))).toBe(undefined);
+      expect(result.find((color: Color) => !color.hasOwnProperty('_rgb'))).toBe(undefined);
     });
 
     test('If it generates an output with linear scale correctly', () => {
@@ -56,8 +55,7 @@ describe('@gradient-js/core', () => {
       };
       const core = new Core();
       const result: Color[] = core.get(colors, config);
-      // @ts-ignore
-      expect(result.find((color: Color) => !Array.isArray(color['_rgb']))).toBe(undefined);
+      expect(result.find((color: Color) => !color.hasOwnProperty('_rgb'))).toBe(undefined);
     });
 
     test('If it generates an output with linear scale and no lightness correction correctly', () => {
@@ -84,7 +82,7 @@ describe('@gradient-js/core', () => {
       };
       const core = new Core();
       const result: Color[] = core.get(colors, config);
-      expect(result.find((c: Color) => !c.hasOwnProperty('_rgb'))).toBe(undefined);
+      expect(result.find((color: Color) => !color.hasOwnProperty('_rgb'))).toBe(undefined);
     });
   });
 });

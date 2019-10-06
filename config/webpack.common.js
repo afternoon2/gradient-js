@@ -18,7 +18,9 @@ module.exports = [
     entry: rootPath('core'),
     output: {
       path: path.join(__dirname, '../packages/core/dist'),
-      filename: 'core.js'
+      filename: 'core.js',
+      library: 'GradientJsCore',
+      libraryTarget: 'umd',
     },
     module: {
       rules: [
@@ -40,7 +42,9 @@ module.exports = [
     entry: rootPath('css'),
     output: {
       path: path.join(__dirname, '../packages/css/dist'),
-      filename: 'css.js'
+      filename: 'css.js',
+      library: 'GradientJsCss',
+      libraryTarget: 'umd',
     },
     module: {
       rules: [
@@ -62,7 +66,9 @@ module.exports = [
     entry: rootPath('svg'),
     output: {
       path: path.join(__dirname, '../packages/svg/dist'),
-      filename: 'svg.js'
+      filename: 'svg.js',
+      library: 'GradientJsSvg',
+      libraryTarget: 'umd',
     },
     module: {
       rules: [

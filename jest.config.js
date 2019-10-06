@@ -10,4 +10,5 @@ module.exports = {
   },
   coverageDirectory: './coverage',
   collectCoverage: true,
+  coveragePathIgnorePatterns: ['/dist/', '/node_modules/'],
 };
