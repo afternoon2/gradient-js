@@ -9,6 +9,7 @@ export type CssOptions = CoreOptions & {
   shape?: 'ellipse' | 'circle';
   extentKeyword?: 'none' | 'closest-side' | 'closest-corner' | 'farthest-side' | 'farthest-corner';
 };
+
 export class Css {
   private core: Core;
   private options?: CssOptions;
