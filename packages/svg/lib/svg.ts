@@ -20,8 +20,8 @@ export type SvgRadialGradientOptions = {
 };
 
 export type RawSvgGradient = {
-  id: string,
-  type: 'linear' | 'radial',
+  id: string;
+  type: 'linear' | 'radial';
   attributes: {
     gradientUnits?: 'objectBoundingBox' | 'userSpaceOnUse';
   } & (Partial<SvgRadialGradientOptions> | Partial<SvgLinearGradientOptions>);
