@@ -19,10 +19,10 @@ export type SvgRadialGradientOptions = {
   spreadMethod: 'pad' | 'repeat' | 'reflect';
 };
 
-export type RawSvgOptions = {
+export type RawSvgGradient = {
+  id: string,
+  type: 'linear' | 'radial',
   attributes: {
-    id: string;
-    type: 'linear' | 'radial';
     gradientUnits?: 'objectBoundingBox' | 'userSpaceOnUse';
   } & (Partial<SvgRadialGradientOptions> | Partial<SvgLinearGradientOptions>);
   stops: SVGStopElement[];
