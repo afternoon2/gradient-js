@@ -1,6 +1,8 @@
 # gradient-js
 Gradient creation library running in the browser 🖌🌈
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 `gradient-js` is a library that takes your source colors and a configuration object to produce a gradient suitable for your needs. You can choose between css, svg and raw (object) output.
 
 `gradient-js` is built on top of [chroma-js](https://github.com/gka/chroma.js) color manipulation library, written by Gregor Aisch.

@@ -2,6 +2,8 @@
 
 `gradient-js` module for raw (object) gradient output generation
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Installation
 
 ### CLI
