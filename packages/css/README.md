@@ -52,9 +52,9 @@ Where each property can be described as it follows:
 
 | Option | Type | Description |
 | - | - | - |
-| `type` | `'linear' | 'radial'` | CSS gradient type - linear or radial |
+| `type` | `'linear'` or `'radial'` | CSS gradient type - linear or radial |
 | `angle`| `number` | Applied to linear gradients only |
 | `left` | `number` | Applied to radial gradients only |
 | `top` | `number` | Applied to radial gradients only |
-| `shape` | `'ellipse' | 'circle'` | Applied to radial gradients only |
-| `extentKeyword` | `'none' | 'closest-side' | 'closest-corner' | 'farthest-side' | 'farthest-corner'`| Applied to radial gradients only |
+| `shape` | `'ellipse'` or `'circle'` | Applied to radial gradients only |
+| `extentKeyword` | `'none'` or `'closest-side'` or `'closest-corner'` or `'farthest-side'` or `'farthest-corner'`| Applied to radial gradients only |
