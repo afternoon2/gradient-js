@@ -8,7 +8,7 @@
 
 #### Yarn
 ```
-yarn install @gradient-js/core
+yarn add @gradient-js/core
 ```
 
 #### Npm
@@ -43,7 +43,7 @@ type CoreOptions = {
   lightnessCorrection: boolean;
 };
 ```
-Where each property describes as it follows:
+Where each property can be described as it follows:
 
 | Option | Type | Description
 | - | - | - |
