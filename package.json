@@ -25,7 +25,6 @@
     "ghooks": "^2.0.4",
     "jest": "^24.9.0",
     "lerna": "^3.16.4",
-    "prettier": "^1.18.2",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.3",
     "webpack": "^4.41.0",
@@ -39,10 +38,7 @@
     "dev": "webpack --config config/webpack.dev.js",
     "commit": "git-cz",
     "lint": "eslint packages/**/lib/*.ts",
-    "test": "jest",
-    "prettier:base": "prettier --parser typescript",
-    "prettier:check": "npm run prettier:base -- --list-different \"packages/**/*.{ts,tsx}\"",
-    "prettier:write": "npm run prettier:base -- --write \"packages/**/*.{ts,tsx}\""
+    "test": "jest"
   },
   "config": {
     "commitizen": {

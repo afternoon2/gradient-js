@@ -29,6 +29,7 @@
     "@types/chroma-js": "^1.4.3",
     "babel-jest": "^24.9.0",
     "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2",
     "semantic-release": "^15.13.24",
     "terser-webpack-plugin": "^2.1.2",
     "ts-jest": "^24.1.0",
