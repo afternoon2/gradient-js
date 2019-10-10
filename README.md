@@ -1,7 +1,7 @@
 # gradient-js
 Gradient creation library running in the browser 🖌🌈
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
 `gradient-js` is a library that takes your source colors and a configuration object to produce a gradient suitable for your needs. You can choose between css, svg and raw (object) output.
 
