@@ -1,11 +1,15 @@
 const path = require('path');
 const { CheckerPlugin } = require('awesome-typescript-loader');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const rootPath = (folder) => './packages/' + folder + '/lib/' + folder + '.ts';
 
 const commonConfig = {
   resolve: {
     extensions: ['.ts'],
+    plugins: [
+      new TsconfigPathsPlugin(),
+    ]
   },
   plugins: [
     new CheckerPlugin(),

@@ -10,7 +10,7 @@
     "dom"
   ],
   "author": "Jakub Antolak <poprostuantolak@gmail.com>",
-  "homepage": "",
+  "homepage": "https://github.com/afternoon2/gradient-js",
   "license": "MIT",
   "main": "dist/svg.js",
   "directories": {
@@ -22,9 +22,6 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "devDependencies": {
     "@types/chroma-js": "^1.4.3",

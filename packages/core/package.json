@@ -9,7 +9,7 @@
     "core"
   ],
   "author": "Jakub Antolak <poprostuantolak@gmail.com>",
-  "homepage": "",
+  "homepage": "https://github.com/afternoon2/gradient-js",
   "license": "MIT",
   "main": "dist/core.js",
   "directories": {
@@ -21,9 +21,6 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
     "chroma-js": "^2.0.6"

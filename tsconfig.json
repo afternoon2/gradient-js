@@ -17,7 +17,13 @@
       "es2018",
       "es2019",
       "dom"
-    ]
+    ],
+    "baseUrl": "/packages",
+    "paths": {
+      "@gradient-js/core": ["core/lib"],
+      "@gradient-js/css": ["css/lib"],
+      "@gradient-js/svg": ["css/svg"]
+    }
   },
   "exclude": [
     "node_modules",
