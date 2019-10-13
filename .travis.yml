@@ -20,11 +20,12 @@ matrix:
   - name: Css Pipeline
     env: PACKAGE_LOCATION=packages/css PACKAGE_NAME=@gradient-js/css
   - name: Svg Pipeline
-    env: PACKAGE_LOCATION=packages/svg PACKAGE_NAME=@gradient-js/svg
+    env: PACKAGE_LOCATION=packages/svg PACKAGE_NAME=@gradient-js/svg ROOT_DIR=../../
 script:
   - cd $PACKAGE_LOCATION
   - yarn test
   - yarn build
+  - cd $ROOT_DIR
 # before_deploy:
 #   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
 # deploy:
