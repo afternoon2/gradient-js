@@ -29,14 +29,15 @@
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.6.3",
     "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "webpack-merge": "^4.2.2"
   },
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "build": "webpack --config config/webpack.prod.js",
-    "dev": "webpack --config config/webpack.dev.js",
+    "build": "webpack --config=./packages/core/config/webpack.prod.js && webpack --config=./packages/css/config/webpack.prod.js && webpack --config=./packages/svg/config/webpack.prod.js",
+    "build:dev": "webpack --config=./packages/core/config/webpack.dev.js && webpack --config=./packages/css/config/webpack.dev.js && webpack --config=./packages/svg/config/webpack.dev.js",
     "commit": "git-cz",
     "lint": "eslint packages/**/lib/*.ts",
     "test": "jest"

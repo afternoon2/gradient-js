@@ -12,7 +12,8 @@ before_install:
   - export PATH="$HOME/.yarn/bin:$PATH"
 install:
   - yarn global add lerna jest
-  - lerna bootstrap
+  - yarn install
+  - yarn build
 script:
   - yarn test
   - yarn build

@@ -22,6 +22,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "build": "webpack --config=./config/webpack.prod.js",
+    "build:dev": "webpack --config=./config/webpack.dev.js"
+  },
   "dependencies": {
     "chroma-js": "^2.0.6"
   },
