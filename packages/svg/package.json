@@ -1,6 +1,6 @@
 {
   "name": "@gradient-js/svg",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Gradient-js svg generation module",
   "keywords": [
     "gradients",
@@ -10,7 +10,7 @@
     "dom"
   ],
   "author": "Jakub Antolak <poprostuantolak@gmail.com>",
-  "homepage": "",
+  "homepage": "https://github.com/afternoon2/gradient-js",
   "license": "MIT",
   "main": "dist/svg.js",
   "directories": {
@@ -24,6 +24,20 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "webpack --config=./config/webpack.prod.js",
+    "build:dev": "webpack --config=./config/webpack.dev.js"
+  },
+  "devDependencies": {
+    "@types/chroma-js": "^1.4.3",
+    "babel-jest": "^24.9.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2",
+    "semantic-release": "^15.13.24",
+    "terser-webpack-plugin": "^2.1.2",
+    "ts-jest": "^24.1.0",
+    "utility-types": "^3.8.0"
+  },
+  "dependencies": {
+    "@gradient-js/core": "^1.0.0"
   }
 }

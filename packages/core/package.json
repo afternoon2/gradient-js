@@ -1,6 +1,6 @@
 {
   "name": "@gradient-js/core",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Gradient-js core module",
   "keywords": [
     "gradients",
@@ -9,7 +9,7 @@
     "core"
   ],
   "author": "Jakub Antolak <poprostuantolak@gmail.com>",
-  "homepage": "",
+  "homepage": "https://github.com/afternoon2/gradient-js",
   "license": "MIT",
   "main": "dist/core.js",
   "directories": {
@@ -23,6 +23,21 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "webpack --config=./config/webpack.prod.js",
+    "build:dev": "webpack --config=./config/webpack.dev.js"
+  },
+  "dependencies": {
+    "chroma-js": "^2.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@types/chroma-js": "^1.4.3",
+    "babel-jest": "^24.9.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2",
+    "semantic-release": "^15.13.24",
+    "terser-webpack-plugin": "^2.1.2",
+    "ts-jest": "^24.1.0",
+    "utility-types": "^3.8.0"
   }
 }
