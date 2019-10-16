@@ -4,25 +4,26 @@ language: node_js
 cache:
   yarn: true
   directories:
-    - "node_modules"
+  - node_modules
 node_js:
-  - "12.3.1"
+- 12.3.1
 before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s
-  - export PATH="$HOME/.yarn/bin:$PATH"
+- curl -o- -L https://yarnpkg.com/install.sh | bash -s
+- export PATH="$HOME/.yarn/bin:$PATH"
 install:
-  - yarn global add lerna jest
-  - yarn install
-  - yarn build
+- yarn global add lerna jest
+- yarn install
+- yarn build
 script:
-  - yarn test
-  - yarn build
-# before_deploy:
-#   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
-# deploy:
-#   provider: script
-#   script: "lerna publish"
-#   skip_cleanup: true
-#   on:
-#     node: "8"
-#     tags: true
+- yarn test
+- yarn build
+before_deploy:
+- echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
+deploy:
+  provider: script
+  email: poprostuantolak@gmail.com
+  script: lerna publish
+  on:
+    branch: master
+  api_key:
+    secure: WvTIltDMh1zwyuvNa3RgkVGbVOm5z/jCrMKVfdLgrWtE3yd0NygA5YIX337k6ScZFzNt1oqRPHQfFLWaf5iBgUNA49Zo9JZDlyDPfWlWpv0anh7sggOUuXszkQun/V/Wno2eUdroFIse8Raih+k1LYKfcNPqkwqHox3APryYOaxBaKaUh0FAli7w2PKuIVQYe1wr5AkdySNVZUV2fBuLnNiJj//Hs6a3At7FBV8OJc8AY1sMkuCjN2R+JNY7xq8PVUBCKQOkVlD82B9pEBbljjlSbhqhRNDyfqhHXMphkNLIyoYGQq6e8KzN5u4S57bsDa2lDgEJpjl3XQol4I3Gq80erJkJz4ISNCUNqa5enq++9IyCH4Op6ne4QTuDFN9mrzcVBHmsXnUAlcEKeDHiAo/uvctV/8yFITa6ZILG/BKG4bff2rdp4fIN39u8TEy/xZXgijJVhyRyRDpN2yQyzFUw+4+aYKtUa8HGFG2zecPE+K/BXECRrEECI4AX8Jo300QpCLibcnvzRYJucUPpnUB8Eph/T5BbARqoVxEubNGT8slya7ynryyHYpIL5aRL5wSJ9EuvjkbZ2ZrzZo1uFeD6N8+4R8OVx/VfEYgJv0QvMZAvJ96x9s4CFzFbYrjDK1FerVAIA1btq5VgJbX6Fs6R2LSoqjQQJfY8JY+sHrU=
