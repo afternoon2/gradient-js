@@ -49,5 +49,9 @@
     "ghooks": {
       "pre-commit": "yarn lint && yarn test"
     }
+  },
+  "resolutions": {
+    "handlebars": "4.5.3",
+    "serialize-javascript": "^2.1.1"
   }
 }
