@@ -13,14 +13,11 @@
   "homepage": "https://github.com/afternoon2/gradient-js",
   "license": "MIT",
   "main": "dist/svg.js",
-  "types": "/dist/svg.d.ts",
+  "types": "dist/svg.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
   "publishConfig": {
     "access": "public"
   },
