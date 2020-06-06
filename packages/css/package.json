@@ -12,6 +12,7 @@
   "homepage": "https://github.com/afternoon2/gradient-js",
   "license": "MIT",
   "main": "dist/css.js",
+  "types": "/dist/css.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
