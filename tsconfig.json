@@ -20,14 +20,24 @@
     ],
     "baseUrl": "/packages",
     "paths": {
-      "@gradient-js/core": ["core/lib"],
-      "@gradient-js/css": ["css/lib"],
-      "@gradient-js/svg": ["css/svg"]
+      "@gradient-js/core": [
+        "core/lib"
+      ],
+      "@gradient-js/css": [
+        "css/lib"
+      ],
+      "@gradient-js/svg": [
+        "css/svg"
+      ]
     }
   },
   "exclude": [
     "node_modules",
     "**/*.spec.ts"
   ],
-  "include": ["/packages/core", "packages/css", "packages/svg"]
+  "include": [
+    "/packages/core",
+    "packages/css",
+    "packages/svg"
+  ]
 }
