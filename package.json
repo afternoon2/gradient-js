@@ -55,6 +55,7 @@
     "serialize-javascript": "^2.1.1",
     "minimist": "^0.2.1",
     "acorn": "^7.1.1",
-    "kind-of": "^6.0.3"
+    "kind-of": "^6.0.3",
+    "lodash": "^4.17.19"
   }
 }
