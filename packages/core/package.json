@@ -37,5 +37,15 @@
     "terser-webpack-plugin": "^2.1.2",
     "ts-jest": "^24.1.0",
     "utility-types": "^3.8.0"
+  },
+  "resolutions": {
+    "handlebars": "4.5.3",
+    "serialize-javascript": "^2.1.1",
+    "minimist": "^0.2.1",
+    "acorn": "^7.1.1",
+    "kind-of": "^6.0.3",
+    "lodash": "^4.17.19",
+    "dot-prop": "^5.1.1",
+    "elliptic": "^6.5.3"
   }
 }
