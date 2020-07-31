@@ -54,7 +54,6 @@ describe('@gradient-js/css', () => {
         type: 'conic',
         angle: 90
       });
-      console.log(gradient);
       expect(regexp.test(gradient)).toBe(true);
     });
 
