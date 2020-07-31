@@ -43,6 +43,36 @@ describe('@gradient-js/css', () => {
     });
   });
 
+  describe('conic gradient generation', () => {
+    test('If it generates conic gradient correctly', () => {
+      const regexp = /conic-gradient\((from\s[0-9]+deg,\s?)?(rgba\(([0-9]+\,\s?)+([0-9]?\.?[0-9]+\)\,?\s?))+\)/;
+      const gradient = css.get(colors, {
+        useBezier: false,
+        samples: 10,
+        interpolation: 'hsl',
+        lightnessCorrection: true,
+        type: 'conic',
+        angle: 90
+      });
+      console.log(gradient);
+      expect(regexp.test(gradient)).toBe(true);
+    });
+
+    test('If it generates conic gradient with position correctly', () => {
+      const regexp = /conic-gradient\((from\s[0-9]+deg at [0-9]+%\s[0-9]+%,\s?)?(rgba\(([0-9]+\,\s?)+([0-9]?\.?[0-9]+\)\,?\s?))+\)/;
+      const gradient = css.get(colors, {
+        useBezier: false,
+        samples: 10,
+        interpolation: 'hsl',
+        lightnessCorrection: true,
+        type: 'conic',
+        angle: 90,
+        conicPosition: { x: 20, y: 30 },
+      });
+      expect(regexp.test(gradient)).toBe(true);
+    });
+  });
+
   describe('radial gradient generation', () => {
     test('If it generates radial gradient with the shape of a circle correctly', () => {
       const regexp = /radial-gradient\((circle\,\s?)(rgba\(([0-9]+\,\s?)+([0-9]?\.?[0-9]+\)\,?\s?))+\)/

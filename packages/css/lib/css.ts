@@ -2,12 +2,13 @@ import { Core, CoreOptions } from '@gradient-js/core';
 import { Color } from 'chroma-js';
 
 export type CssOptions = CoreOptions & {
-  type: 'linear' | 'radial';
+  type: 'linear' | 'radial' | 'conic';
   angle?: number;
   left?: number;
   top?: number;
   shape?: 'ellipse' | 'circle';
   extentKeyword?: 'none' | 'closest-side' | 'closest-corner' | 'farthest-side' | 'farthest-corner';
+  conicPosition?: { x: number; y: number };
 };
 
 export class Css {
@@ -32,7 +33,27 @@ export class Css {
 
   private get angle(): string {
     const options = this.options as CssOptions;
-    return options.angle && options.type === 'linear' ? `${options.angle}deg, ` : '';
+    if (options.angle) {
+      let angleString: string;
+      switch (options.type) {
+        case 'linear':
+          angleString = `${options.angle}deg, `;
+          break;
+        case 'radial':
+          angleString = '';
+          break;
+        case 'conic':
+          angleString = `from ${options.angle}deg${
+            options.conicPosition ? ` at ${options.conicPosition.x}% ${options.conicPosition.y}%` : ''
+          }, `;
+          break;
+        default:
+          angleString = '';
+          break;
+      }
+      return angleString;
+    }
+    return '';
   }
 
   private get shape(): string {
@@ -71,10 +92,14 @@ export class Css {
     let extentKeyword: string;
     const options = this.options as CssOptions;
     const afterExtent = options.top && options.left ? ` at ${options.left}% ${options.top}%, ` : ', ';
-    if (options.shape === 'ellipse' && options.extentKeyword && options.extentKeyword !== 'none') {
-      extentKeyword = options.extentKeyword + afterExtent;
-    } else if (options.shape === 'ellipse' && !options.extentKeyword && options.top && options.left) {
-      extentKeyword = afterExtent;
+    if (options.type !== 'conic') {
+      if (options.shape === 'ellipse' && options.extentKeyword && options.extentKeyword !== 'none') {
+        extentKeyword = options.extentKeyword + afterExtent;
+      } else if (options.shape === 'ellipse' && !options.extentKeyword && options.top && options.left) {
+        extentKeyword = afterExtent;
+      } else {
+        extentKeyword = '';
+      }
     } else {
       extentKeyword = '';
     }
