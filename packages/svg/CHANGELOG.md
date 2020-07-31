@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/afternoon2/gradient-js/compare/@gradient-js/svg@1.1.2...@gradient-js/svg@1.1.3) (2020-07-31)
+
+
+### Bug Fixes
+
+* fix vulnerability issues ([7de3665](https://github.com/afternoon2/gradient-js/commit/7de36656f235bd2ec4aba563f01581c69a454430))
+
+
+
+
+
 ## [1.1.2](https://github.com/afternoon2/gradient-js/compare/@gradient-js/svg@1.1.1...@gradient-js/svg@1.1.2) (2020-06-06)
 
 **Note:** Version bump only for package @gradient-js/svg

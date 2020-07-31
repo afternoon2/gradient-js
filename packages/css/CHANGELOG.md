@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/afternoon2/gradient-js/compare/@gradient-js/css@1.2.0...@gradient-js/css@1.2.1) (2020-07-31)
+
+
+### Bug Fixes
+
+* fix vulnerability issues ([7de3665](https://github.com/afternoon2/gradient-js/commit/7de36656f235bd2ec4aba563f01581c69a454430))
+
+
+
+
+
 # [1.2.0](https://github.com/afternoon2/gradient-js/compare/@gradient-js/css@1.1.2...@gradient-js/css@1.2.0) (2020-07-31)
 
 
