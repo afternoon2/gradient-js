@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/afternoon2/gradient-js/compare/@gradient-js/css@1.1.2...@gradient-js/css@1.2.0) (2020-07-31)
+
+
+### Features
+
+* **css:** add CSS conic gradients support ([50c667b](https://github.com/afternoon2/gradient-js/commit/50c667b5ebb6d836a9f0dbc0f6b86f1d7fdb34d8))
+
+
+
+
+
 ## [1.1.2](https://github.com/afternoon2/gradient-js/compare/@gradient-js/css@1.1.1...@gradient-js/css@1.1.2) (2020-06-06)
 
 **Note:** Version bump only for package @gradient-js/css
