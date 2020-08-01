@@ -26,6 +26,8 @@ jobs:
         run: |
           yarn global add lerna jest
           yarn install
+          lerna bootstrap
+          lerna link
           yarn test
           yarn build
           lerna publish
