@@ -1,6 +1,6 @@
 {
   "name": "@gradient-js/css",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Gradient-js css generation module",
   "keywords": [
     "gradients",
