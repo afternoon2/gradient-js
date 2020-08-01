@@ -83,9 +83,9 @@ export class Svg {
     const options = this.options as SvgOptions;
     const gradient = this.createSvgElement(`${options.type}Gradient` as RequiredKeys<SVGElementTagNameMap>);
     const attrs = /((id)|([c|f|x|y|r][x|y|1|2]?)|(gradientUnits))/;
-    const gradientOptions = options[`${options.type}GradientOptions`] as (
+    const gradientOptions = options[`${options.type}GradientOptions`] as
       | SvgLinearGradientOptions
-      | SvgRadialGradientOptions);
+      | SvgRadialGradientOptions;
     const finalOptions = {
       id: options.id,
       type: options.type,

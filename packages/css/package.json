@@ -25,14 +25,14 @@
     "build:dev": "webpack --config=./config/webpack.dev.js"
   },
   "devDependencies": {
-    "@types/chroma-js": "^1.4.3",
-    "babel-jest": "^24.9.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "^1.18.2",
-    "semantic-release": "^15.13.24",
-    "terser-webpack-plugin": "^2.1.2",
-    "ts-jest": "^24.1.0",
-    "utility-types": "^3.8.0"
+    "@types/chroma-js": "^2.0.0",
+    "babel-jest": "^26.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
+    "semantic-release": "^17.1.1",
+    "terser-webpack-plugin": "^3.0.8",
+    "ts-jest": "^26.1.4",
+    "utility-types": "^3.10.0"
   },
   "dependencies": {
     "@gradient-js/core": "^1.1.3"

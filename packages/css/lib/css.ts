@@ -60,16 +60,17 @@ export class Css {
     const options = this.options as CssOptions;
     let shape = '';
     if (options.type === 'radial') {
-      if (options.shape && options.shape !== 'ellipse' && (!options.top && !options.left)) {
+      if (options.shape && options.shape !== 'ellipse' && !options.top && !options.left) {
         shape = `${options.shape}, `;
       }
-      if (options.shape && options.shape !== 'ellipse' && (options.top && options.left)) {
+      if (options.shape && options.shape !== 'ellipse' && options.top && options.left) {
         shape = `${options.shape} at ${options.left}% ${options.top}%, `;
       }
       if (
         options.shape &&
         options.shape === 'ellipse' &&
-        (options.top && options.left) &&
+        options.top &&
+        options.left &&
         options.extentKeyword === 'none'
       ) {
         shape = `${options.shape} at ${options.left}% ${options.top}%, `;
@@ -77,7 +78,8 @@ export class Css {
       if (
         options.shape &&
         options.shape === 'ellipse' &&
-        (options.top && options.left) &&
+        options.top &&
+        options.left &&
         options.extentKeyword !== 'none'
       ) {
         shape = '';
