@@ -8,7 +8,6 @@ export type CssOptions = CoreOptions & {
   top?: number;
   shape?: 'ellipse' | 'circle';
   extentKeyword?: 'none' | 'closest-side' | 'closest-corner' | 'farthest-side' | 'farthest-corner';
-  conicPosition?: { x: number; y: number };
 };
 
 export class Css {
@@ -44,7 +43,7 @@ export class Css {
           break;
         case 'conic':
           angleString = `from ${options.angle}deg${
-            options.conicPosition ? ` at ${options.conicPosition.x}% ${options.conicPosition.y}%` : ''
+            options.top && options.left ? ` at ${options.left}% ${options.top}%` : ''
           }, `;
           break;
         default:

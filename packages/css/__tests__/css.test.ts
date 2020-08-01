@@ -66,7 +66,8 @@ describe('@gradient-js/css', () => {
         lightnessCorrection: true,
         type: 'conic',
         angle: 90,
-        conicPosition: { x: 20, y: 30 },
+        top: 30,
+        left: 20,
       });
       expect(regexp.test(gradient)).toBe(true);
     });
